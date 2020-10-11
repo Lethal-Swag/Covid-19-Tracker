@@ -1,0 +1,42 @@
+
+body{
+    background-image: url("https://www.uppsalareports.org/media/baqkbrdy/ur-covid-web-20200414.jpg");   
+    
+}
+.main{
+   padding: 0;
+   margin: 0;  
+   position: absolute;
+
+}
+.tableClass{
+   position: relative;
+   left: 500px;
+   bottom: 300px;
+   font-size: 12px;
+}
+.inputClass{
+   position: relative;
+   top: 110px;
+   left: 90px;
+}
+#input{
+   background-color:lightsalmon;
+}
+.inputClass{
+   background-color: lightseagreen;
+   padding-right: 0px;
+   text-align: center;
+    width: 220px; 
+     }
+     .tableClass::-webkit-scrollbar { 
+display: none;  
+}
+#p1{
+text-align: center;
+padding-left: 550px;
+padding-top: 10px;
+font-size:xx-large;
+color:red;
+font-weight: 600;
+}
