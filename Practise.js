@@ -1,7 +1,7 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
 
-//targeting country code 
+//country code 
 let US = 'US';
 let IN = 'IN';
 let BR = 'BR';
@@ -80,6 +80,7 @@ async function drawChart() {
   var options = {
     title: 'Corona summary',
     is3D: true,
+    
   };
 
   var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -132,7 +133,7 @@ async function drawChart() {
       pND3.innerHTML = Countries[i].NewDeaths;
       pTD3.innerHTML = Countries[i].TotalDeaths;
       pNR3.innerHTML = Countries[i].NewRecovered;
-      pTR3innerHTML = Countries[i].TotalRecovered;
+      pTR3.innerHTML = Countries[i].TotalRecovered;
       break;
     }
   }
