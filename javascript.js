@@ -195,4 +195,15 @@ async function Search(){
       pTR6.innerHTML = Countries[index].TotalRecovered;
 }
 
-let a;
+let head = document.getElementById('head');
+
+    window.onscroll = function () {
+        let top = window.scrollY;
+        if( top >= 440){
+          head.classList.add('active');
+        }
+        else
+        {
+          head.classList.remove('active');
+        }
+    }
