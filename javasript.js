@@ -80,7 +80,7 @@ async function drawChart() {
   var options = {
     title: 'Corona summary',
     is3D: true,
-    
+
   };
 
   var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -165,45 +165,56 @@ async function drawChart() {
   }
 }
 
+//Search box code
+const error = document.getElementById('error');
+error.style.display = 'none';
+let cross = document.getElementById('cross');
+cross.addEventListener('click',()=>{
+  error.style.display = 'none';
+})
+
 let fullname = document.getElementById('fullname');
 let countryname = document.getElementById('countryname');
 let h2 = document.getElementById('h2');
-async function Search(){
+
+async function Search() {
   let response = await fetch(`https://api.covid19api.com/summary`);
   let data1 = await response.json();
   let Countries = data1['Countries'];
   let uservalue = fullname.value;
-  
-  let index=0;
 
-  for(let i =0;i<=data1['Countries'].length;i++){
-    if(uservalue === Countries[i].Country){
-      index=i;
-      uservalue = "";
-      break;
-    }
-   
-  }
-  
-  h2.innerHTML = uservalue;
-  
+  let index = 0;
+
+  for (let i = 0; i <= data1['Countries'].length; i++) {
+    try{
+    if (uservalue == Countries[i].Country) {
+      index = i;
+      fullname.value = "";
+
+      h2.innerHTML = uservalue;
       pNC6.innerHTML = Countries[index].NewConfirmed;
       pTC6.innerHTML = Countries[index].TotalConfirmed;
       pND6.innerHTML = Countries[index].NewDeaths;
       pTD6.innerHTML = Countries[index].TotalDeaths;
       pNR6.innerHTML = Countries[index].NewRecovered;
       pTR6.innerHTML = Countries[index].TotalRecovered;
+      break;
+    }}
+    catch(e){
+      error.style.display = 'block';
+    }
+  }
 }
 
+//changing color of header
 let head = document.getElementById('head');
 
-    window.onscroll = function () {
-        let top = window.scrollY;
-        if( top >= 440){
-          head.classList.add('active');
-        }
-        else
-        {
-          head.classList.remove('active');
-        }
-    }
+window.onscroll = function () {
+  let top = window.scrollY;
+  if (top >= 440) {
+    head.classList.add('active');
+  }
+  else {
+    head.classList.remove('active');
+  }
+}
