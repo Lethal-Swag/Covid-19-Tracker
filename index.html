@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,37 +7,11 @@
   <!-- CSS only -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="Practise.css">
+  <link rel="stylesheet" href="Practise.css" type="text/css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
   <title>Document</title>
 </head>
-<style>
-  html{
-    scroll-behavior: smooth;
-  }
-  #head {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-  }
-
-  #head.active {
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    background-color: red;
-    width: 100%;
-    padding: 1.4em;
-    left: 0;
-    border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
-    background-color: black;
-    opacity: 0.5;
-  }
-</style>
-
 <body>
   <!--Header Section-->
 
@@ -48,7 +22,9 @@
     style=" background-image: url('https://scontent.fluh1-1.fna.fbcdn.net/v/t1.0-0/p180x540/136318741_2929776723945525_1269738888522590188_o.jpg?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_ohc=amWEjfbomyQAX81wYV1&_nc_ht=scontent.fluh1-1.fna&tp=6&oh=d40f4ab92321609068d8e7ef7ef1be7f&oe=60194F0B'); background-repeat: no-repeat;">
     <div id="head"
       class="shadow-lg p-2 fixed w-full z-10 flex flex-wrap p-5 flex-col border-b pb-50 border-gray-200 md:flex-row items-center sm\:flex-row sm:items-center">
-      <nav  class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto" id="item">
+
+
         <a class="mr-5 hover:text-gray-400  font-bold" href="#cont">Home</a>
         <a class="mr-5 hover:text-gray-400 font-bold" href="#team">Team</a>
 
@@ -86,7 +62,7 @@
   <!-- Corona section -->
 
   <section class="text-white body-font "
-    style="background-image: url('https://scontent.fluh1-1.fna.fbcdn.net/v/t1.0-9/134373574_2926639387592592_7113141427616990231_n.jpg?_nc_cat=100&ccb=2&_nc_sid=730e14&_nc_ohc=IFHFlaX1Is0AX9oA0rw&_nc_ht=scontent.fluh1-1.fna&oh=f5b5c9e1f76d6cfe12fc94f9e6ca6777&oe=60145BC6'); opacity : 0.9; background-repeat: no-repeat; background-size: 100% 100%;"
+    style="background-image: url('https://scontent.fluh1-1.fna.fbcdn.net/v/t1.0-9/134373574_2926639387592592_7113141427616990231_n.jpg?_nc_cat=100&ccb=2&_nc_sid=730e14&_nc_ohc=IFHFlaX1Is0AX9oA0rw&_nc_ht=scontent.fluh1-1.fna&oh=f5b5c9e1f76d6cfe12fc94f9e6ca6777&oe=60145BC6'); opacity : 0.9; background-repeat: no-repeat; background-size: 100% 100%; filter: blur(0.1px);"
     id="coronaSection">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
@@ -103,9 +79,9 @@
 
         <!-- Blocks area -->
 
-        <div class="xl:w-1/3 md:w-1/2 p-4" >
+        <div class="xl:w-1/3 md:w-1/2 p-4">
           <div
-            class="border border-gray-300 p-6 rounded-lg text-gray-900 transform hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            class="border border-gray-300 p-6 rounded-lg text-gray-900 transform duration-150 ease-in-out hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
             <div
               class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -116,7 +92,7 @@
             </div>
 
             <h2 class="text-lg text-gray-900 font-medium title-font mb-2 ">United States</h2>
-            <div class="text-left  md:text-center ..." >
+            <div class="text-left  md:text-center ...">
 
               <p class="text-left md:text-center font-bold ...">New Confirmed</p>
               <p class="font-medium title-font form-control mb-2 text-left md:text-center font-bold ..."
@@ -143,7 +119,7 @@
 
         <div class="xl:w-1/3 md:w-1/2 p-4">
           <div
-            class="border border-gray-300 p-6 rounded-lg transform hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            class="border border-gray-300 p-6 rounded-lg transform duration-150 ease-in-out hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
             <div
               class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -182,7 +158,7 @@
 
         <div class="xl:w-1/3 md:w-1/2 p-4">
           <div
-            class="border border-gray-300 p-6 rounded-lg text-gray-900 transform hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            class="border border-gray-300 p-6 rounded-lg text-gray-900 transform duration-150 ease-in-out hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
             <div
               class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -219,7 +195,7 @@
         </div>
         <div class="xl:w-1/3 md:w-1/2 p-4">
           <div
-            class="border border-gray-300 p-6 rounded-lg transform hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            class="border border-gray-300 p-6 rounded-lg transform duration-150 ease-in-out hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
             <div
               class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -256,7 +232,7 @@
         </div>
         <div class="xl:w-1/3 md:w-1/2 p-4">
           <div
-            class="border border-gray-300 p-6 rounded-lg transform hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            class="border border-gray-300 p-6 rounded-lg transform duration-150 ease-in-out hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
             <div
               class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -294,7 +270,7 @@
 
         <div class="xl:w-1/3 md:w-1/2 p-4 ">
           <div
-            class="border border-gray-300 p-6 rounded-lg transform hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+            class="border border-gray-300 p-6 rounded-lg transform duration-150 ease-in-out hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
             <div
               class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -332,7 +308,8 @@
   </section>
   <!-- Corona search -->
 
-  <section class="text-gray-700 body-font bg-white" style="background-image: url(hh.jpg); background-size: 100% 100%;"id="search">
+  <section class="text-gray-700 body-font bg-white" 
+    id="search1">
     <div class="container flex flex-wrap px-5 py-24 mx-auto items-center">
       <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-300">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-red-400">Wait CHECK!</h1>
@@ -353,7 +330,7 @@
       </div>
       <div class="flex flex-col md:w-1/2 md:pl-12">
         <h2 class="title-font font-medium text-gray-800 tracking-widest text-sm mb-3">RESULT</h2>
-<!--Alert box-->
+        <!--Alert box-->
         <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500" id="error">
           <span class="text-xl inline-block mr-5 align-middle">
             <i class="fas fa-bell">
@@ -361,28 +338,35 @@
           <span class="inline-block align-middle mr-8">
             <b class="capitalize">SEE!</b> your first letter must be capital OR check spelling!
           </span>
-          <button id = "cross" class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none">
+          <button id="cross"
+            class="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none">
             <span>×</span>
           </button>
         </div>
-     <!--Alert end -->   
-        <div class="border border-gray-300 p-6 rounded-lg text-center">
+        <!--Alert end -->
+        <div class="border border-gray-300 p-6 rounded-lg text-center shadow-lg">
           <div class=" text-center">
             <h2 class="text-lg text-gray-900 font-medium title-font mb-2 " id="h2">Country Name</h2>
             <div class="text-left md:text-center ... ">
 
               <p class="text-left md:text-center ...">New Confirmed</p>
-              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none; opacity: 0.8;" id="NC6"></p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..."
+                style="background-color: none; opacity: 0.8;" id="NC6"></p>
               <p class="text-left md:text-center ...">Total Confirmed</p>
-              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none; opacity: 0.8;" id="TC6"></p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..."
+                style="background-color: none; opacity: 0.8;" id="TC6"></p>
               <p class="text-left md:text-center ...">New Deaths</p>
-              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none; opacity: 0.8;" id="ND6"></p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..."
+                style="background-color: none; opacity: 0.8;" id="ND6"></p>
               <p class="text-left md:text-center ...">Total Deaths</p>
-              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none; opacity: 0.8;" id="TD6"></p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..."
+                style="background-color: none; opacity: 0.8;" id="TD6"></p>
               <p class="text-left md:text-center ...">New Recovered</p>
-              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none; opacity: 0.8;" id="NR6"></p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..."
+                style="background-color: none; opacity: 0.8;" id="NR6"></p>
               <p class="text-left md:text-center ...">Total Recovered</p>
-              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..." style="background-color: none; opacity: 0.8;" id="TR6"></p>
+              <p class="bg-white font-medium title-font form-control mb-2 text-left md:text-center ..."
+                style="background-color: none; opacity: 0.8;" id="TR6"></p>
 
             </div>
           </div>
@@ -407,7 +391,8 @@
           <h2 class="text-white text-lg title-font font-medium mb-2 text-shadow-sm"
             style="text-shadow: 2px 2px 0px #181717;">Manpreet Singh</h2>
           <span class="text-white text-sm" style="text-shadow: 2px 2px 0px #181717;">UI/UX DEVELOPER</span>
-          <p class="leading-relaxed text-base text-white">Here,I style myself around hardwork and growth. I designed this website for general purpose.</p>
+          <p class="leading-relaxed text-base text-white">Here,I style myself around hardwork and growth. I designed
+            this website for general purpose.</p>
 
         </div>
       </div>
@@ -424,7 +409,7 @@
         </div>
         <img
           class="animate-pulse ease duration-300 sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full flex-shrink-0"
-          src="https://scontent.fluh1-1.fna.fbcdn.net/v/t1.0-0/p526x296/132040738_2917625755160622_8036517415466813755_o.jpg?_nc_cat=101&ccb=2&_nc_sid=730e14&_nc_ohc=uxg3S-PmS1IAX8duUk0&_nc_ht=scontent.fluh1-1.fna&tp=6&oh=5a9967c0ebfd62eeab277317a28561cd&oe=60040716">
+          src="https://scontent.fluh1-1.fna.fbcdn.net/v/t1.0-0/p526x296/132040738_2917625755160622_8036517415466813755_o.jpg?_nc_cat=101&ccb=2&_nc_sid=730e14&_nc_ohc=J1yZmiTpmNwAX-4w67k&_nc_ht=scontent.fluh1-1.fna&tp=6&oh=e5cc5e623d9a0e9f463d4c7814bdf436&oe=602B9416">
       </div>
 
       <!--footer-->
@@ -440,7 +425,7 @@
           </p>
           <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start ">
             <a href="https://www.facebook.com/LethalSwag123/"
-              class="text-white animate-bounce  transform duration-1000 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+              class="text-white animate-bounce  transform ease-in-out duration-150 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
               <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
                 viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -448,7 +433,7 @@
             </a>
             <p>&nbsp</p>
             <a href="https://twitter.com/swag-lethal"
-              class="text-white transform duration-1000 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+              class="text-white transform ease-in-out duration-150 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
               <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
                 viewBox="0 0 24 24">
                 <path
@@ -459,7 +444,7 @@
             <p>&nbsp</p>
             <p>&nbsp</p>
             <a href="https://instagram/lethal_swag"
-              class="text-white transform duration-1000 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
+              class="text-white transform  ease-in-out duration-150 hover:text-red-500 hover:-translate-y-1 hover:scale-110 ...">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 class="w-5 h-5" viewBox="0 0 24 24">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -469,7 +454,7 @@
             <p>&nbsp</p>
             <p>&nbsp</p>
             <a href="https://www.linkedin.com/in/lethal-swag/"
-              class="text-white duration-1000 transform hover:text-s hover:-translate-y-1 hover:scale-110 ...">
+              class="text-white transform ease-in-out duration-150 hover:text-red-500 hover:text-s hover:-translate-y-1 hover:scale-110 ...">
               <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                 <path stroke="none"
