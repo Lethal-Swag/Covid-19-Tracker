@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <title>Slider</title>
+  <style>
+    #slide1 {
+      position: relative;
+      background-image: url('./public/images/slide1.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    #slide2 {
+      position: relative;
+      background-image: url('./public/images/slide2.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    #slide3 {
+      position: relative;
+      background-image: url('./public/images/slide3.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    #newbtn{
+      background-image: url('./public/images/shine.gif');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      }
+      
+    
+
+
+  </style>
+</head>
+
+<body>
+  <header class="text-gray-600 body-font bg-gray-800">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <button class="p-2 bg-black items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" id="newbtn"
+          role="alert" onclick="toggle_visibility()" style="outline: none;">
+          <span class="flex rounded-full bg-yellow-500 uppercase px-2 py-1 text-xs font-bold mr-3" >New</span>
+          <span class="font-semibold mr-2 text-left text-yellow-500 flex-auto">Share Your Reviews</span>
+          <svg class="fill-current text-yellow-500 opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+          </svg>
+    </div>
+
+    </nav>
+
+    </div>
+  </header>
+  <!-- input values -->
+  <div class="slideshow-container">
+    <div id="feedback-main" style="display: none;">
+      <div id="feedback-div">
+        <form class="form mt-4 ml-4" id="feedback-form1" name="form1" enctype="multipart/form-data">
+
+          <div class="relative flex w-60 flex-wrap items-stretch mb-3">
+            <input type="text" placeholder="Enter Name" id="InputName"
+              class="px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pr-10" />
+            <span
+              class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+
+          <div class="relative flex w-60 flex-wrap items-stretch mb-3">
+            <input type="text" placeholder="Senior profile" id="InputProfile"
+              class="px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pr-10" />
+            <span
+              class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+              <i class="far fa-id-badge"></i>
+            </span>
+          </div>
+
+          <div class="relative flex w-2/5  flex-wrap items-stretch mb-3 ">
+            <textarea type="text" placeholder="Please Review Us" id="InputReview"
+              class="px-3 py-3 h-48 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pr-10"></textarea>
+            <span
+              class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+              <i class="far fa-file-alt"></i>
+            </span>
+          </div>
+
+          <div class="feedback-submit">
+            
+            <button class="bg-black hover:bg-yellow-200 text-yellow-500 font-bold py-2 px-4 rounded mb-4" id="enterBtn" onclick="saveData()">
+              Enter
+            </button>
+            <div class="feedback-ease"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    </div>
+
+    <!--- Sliders -->
+    <div class="mySlides">
+
+      <section class="body-font " id="slide1">
+        <div class="container px-5 py-24 mx-auto  ">
+          <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class=" inline-block w-8 h-8 text-gray-400 mb-8"
+              viewBox="0 0 975.036 975.036">
+              <path
+                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+              </path>
+            </svg>
+            <p class="leading-relaxed text-lg mb-8 text-white" id="ShowReview"></p>
+            <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-8 mb-6 "></span>
+            <h2 class="text-white font-medium title-font tracking-wider text-sm" id="ShowName"></h2>
+            <p class="text-yellow-300" id="ShowProfile"></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="mySlides">
+
+      <section class=" body-font " id="slide2">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8"
+              viewBox="0 0 975.036 975.036">
+              <path
+                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+              </path>
+            </svg>
+            <p class="leading-relaxed text-lg mb-8 text-white" id="ShowReview1"></p>
+            <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-8 mb-6"></span>
+            <h2 class="text-white font-medium title-font tracking-wider text-sm" id="ShowName1"></h2>
+            <p class="text-yellow-300" id="ShowProfile1"></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="mySlides">
+      
+      <section class="text-yellow-500 body-font bg-gray-400" id="slide3">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8"
+              viewBox="0 0 975.036 975.036">
+              <path
+                d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+              </path>
+            </svg>
+            <p class="leading-relaxed text-lg mb-8 text-white" id="ShowReview2"></p>
+            <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-8 mb-6"></span>
+            <h2 class="text-white font-medium title-font tracking-wider text-sm" id="ShowName2"></h2>
+            <p class="text-yellow-300" id="ShowProfile2"></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</body>
+
+
+<script>
+  
+  var slideIndex = 0;
+  showSlides();
+  showData();
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+
+    if (slideIndex > slides.length) { slideIndex = 1 }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+  }
+
+  function toggle_visibility() {
+    var e = document.getElementById('feedback-main');
+    
+    if (e.style.display == 'block') e.style.display = 'none'; 
+    else e.style.display = 'block';
+
+  }
+
+
+  //     To save data in local storage
+
+  function saveData() {
+
+    let person = {
+      Name: document.getElementById('InputName').value,
+      Profile: document.getElementById('InputProfile').value,
+      Review: document.getElementById('InputReview').value
+    }
+    let Comments;
+    if (localStorage.getItem("Comments") === null) {
+      Comments = [];
+    }
+    else {
+      Comments = JSON.parse(localStorage.getItem('Comments'));
+    }
+    Comments.push(person);
+    localStorage.setItem("Comments", JSON.stringify(Comments));
+    let retrieveData = JSON.parse(localStorage.getItem('Comments'));
+
+    document.createElement('div')
+    document.getElementById('ShowName').value = retrieveData[0].feedback;
+    document.getElementById('InputName').value = "";
+    document.getElementById('InputProfile').value = "";
+    document.getElementById('InputReview').value = "";
+    
+    toggle_visibility();
+    showData();
+
+  }
+
+  function showData() {
+    let retrieveData = JSON.parse(localStorage.getItem('Comments'));
+    let i = retrieveData.length - 1;
+
+    document.getElementById('ShowName').innerHTML = retrieveData[i].Name;
+    document.getElementById('ShowProfile').innerHTML = retrieveData[i].Profile;
+    document.getElementById('ShowReview').innerHTML = retrieveData[i].Review;
+
+    document.getElementById('ShowName1').innerHTML = retrieveData[--i].Name;
+    document.getElementById('ShowProfile1').innerHTML = retrieveData[--i].Profile;
+    document.getElementById('ShowReview1').innerHTML = retrieveData[--i].Review;
+
+    document.getElementById('ShowName2').innerHTML = retrieveData[--i].Name;
+    document.getElementById('ShowProfile2').innerHTML = retrieveData[--i].Profile;
+    document.getElementById('ShowReview2').innerHTML = retrieveData[--i].Review;
+
+
+  }
+
+
+</script>
+
+</body>
+
+</html>

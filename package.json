@@ -1,0 +1,17 @@
+{
+  "name": "covid-19-tracker",
+  "version": "1.0.0",
+  "description": "keep trying to make it FULL STACK",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "pug": "^3.0.2"
+  }
+}
