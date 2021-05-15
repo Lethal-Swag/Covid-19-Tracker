@@ -14,8 +14,8 @@ app.set('views' , path.join(__dirname, 'views'));
 app.get( '/' , (req,res)=>{
     res.render('Home.pug');
 })
-app.listen(port , ()=>{
-    console.log(" :: We're at 3000 now :: ");
-})
+// app.listen(port , ()=>{
+//     console.log(" :: We're at 3000 now :: ");
+// })
 
 module.exports = app;
